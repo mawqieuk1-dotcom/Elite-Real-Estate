@@ -7,6 +7,8 @@
 <meta name="description" content="مكتب النخبة للعقارات مكتب متخصص في الرياض، بيع وتأجير الفلل والشقق والأراضي. شغل مرتب ويستاهل من جميع النواحي، خبرة عالية وتعامل راقي.">
 <meta name="keywords" content="مكتب النخبة, عقارات الرياض, فلل للبيع, شقق استثمارية, أراضي, إدارة أملاك, خالد العتيبي, العليا, التحلية">
 <meta name="author" content="مكتب النخبة للعقارات">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="canonical" href="https://nukhbarealestate.sa">
 <meta property="og:title" content="مكتب النخبة للعقارات | Elite Real Estate">
 <meta property="og:description" content="مكتب متخصص في الرياض، بيع وتأجير الفلل والشقق والأراضي. شغل مرتب ويستاهل من جميع النواحي.">
@@ -19,11 +21,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;min-width:0}
 :root{--primary:#1E4D7B;--primary-light:#2d6a9e;--primary-dark:#153a5c;--gold:#C8963E;--gold-light:#dbb05c;--ios-bg:#F2F2F7;--ios-card:#FFFFFF;--ios-card-2:#F9F9FB;--ios-text:#1C1C1E;--ios-text-2:#3A3A3C;--ios-muted:#8E8E93;--ios-separator:rgba(60,60,67,0.12);--ios-glass:rgba(255,255,255,0.72);--ios-shadow:0 4px 24px rgba(0,0,0,0.04),0 1px 3px rgba(0,0,0,0.02);--ios-shadow-lg:0 12px 48px rgba(0,0,0,0.08),0 2px 8px rgba(0,0,0,0.03);--star:#FFB340;--whatsapp:#25D366;--transition:0.4s cubic-bezier(0.25,0.1,0.25,1);--transition-fast:0.2s cubic-bezier(0.25,0.1,0.25,1);--radius-sm:14px;--radius:24px;--radius-lg:32px;--radius-pill:999px;--font:'Tajawal',-apple-system,BlinkMacSystemFont,sans-serif;--modal-overlay:rgba(0,0,0,0.4);--marquee-height:36px}
 [data-theme="dark"]{--ios-bg:#000000;--ios-card:#1C1C1E;--ios-card-2:#2C2C2E;--ios-text:#FFFFFF;--ios-text-2:#EBEBF5;--ios-muted:#98989D;--ios-separator:rgba(84,84,88,0.65);--ios-glass:rgba(28,28,30,0.72);--ios-shadow:0 4px 24px rgba(0,0,0,0.4),0 1px 3px rgba(0,0,0,0.3);--ios-shadow-lg:0 12px 48px rgba(0,0,0,0.5),0 2px 8px rgba(0,0,0,0.3);--modal-overlay:rgba(0,0,0,0.6)}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--font);background-color:var(--ios-bg);color:var(--ios-text);transition:background-color 0.5s var(--transition),color 0.5s var(--transition);line-height:1.5;overflow-x:hidden;min-height:100vh;font-size:17px;font-weight:400;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;max-width:100%;overflow-x:hidden}
+body{font-family:var(--font);background-color:var(--ios-bg);color:var(--ios-text);transition:background-color 0.5s var(--transition),color 0.5s var(--transition);line-height:1.5;overflow-x:hidden;min-height:100vh;font-size:17px;font-weight:400;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;max-width:100%}
 a{text-decoration:none;color:inherit;transition:opacity var(--transition-fast)}a:active{opacity:0.6}
 button{font-family:var(--font);cursor:pointer;border:none;background:none;color:inherit;transition:transform var(--transition-fast)}button:active{transform:scale(0.97)}
 input,select,textarea{font-family:var(--font);background:var(--ios-card);color:var(--ios-text);border:1px solid var(--ios-separator);border-radius:var(--radius-sm);padding:14px 18px;font-size:17px;width:100%;transition:border-color var(--transition-fast),box-shadow var(--transition-fast);outline:none;-webkit-appearance:none;appearance:none}
@@ -36,9 +38,9 @@ input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0
 .aurora::after{background:radial-gradient(circle,var(--gold),transparent 70%);bottom:-40vmax;left:-40vmax;animation-delay:-11s}
 [data-theme="dark"] .aurora::before{opacity:0.15}[data-theme="dark"] .aurora::after{opacity:0.12}
 @keyframes auroraMove{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-6vmax,6vmax) scale(1.15)}100%{transform:translate(6vmax,-6vmax) scale(1)}}
-.marquee-wrap{position:fixed;top:0;left:0;right:0;z-index:1001;background:linear-gradient(90deg,var(--primary),var(--gold),var(--primary));background-size:200% 100%;animation:marqueeBg 6s linear infinite;height:var(--marquee-height);display:flex;align-items:center;overflow:hidden;box-shadow:0 2px 12px rgba(30,77,123,0.3)}
+.marquee-wrap{position:fixed;top:0;left:0;right:0;z-index:1001;background:linear-gradient(90deg,var(--primary),var(--gold),var(--primary));background-size:200% 100%;animation:marqueeBg 6s linear infinite;height:var(--marquee-height);display:flex;align-items:center;overflow:hidden;box-shadow:0 2px 12px rgba(30,77,123,0.3);max-width:100vw}
 @keyframes marqueeBg{0%{background-position:0% 0}100%{background-position:200% 0}}
-.marquee-inner{display:flex;white-space:nowrap;animation:marqueeScroll 25s linear infinite}
+.marquee-inner{display:flex;white-space:nowrap;animation:marqueeScroll 25s linear infinite;max-width:100vw}
 .marquee-inner span{color:#fff;font-weight:700;font-size:13px;padding:0 40px;letter-spacing:0.3px}
 @keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(50%)}}
 .navbar{position:fixed;top:var(--marquee-height);left:0;right:0;z-index:1000;padding:12px 0;background:var(--ios-glass);backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);transition:all var(--transition);border-bottom:0.5px solid var(--ios-separator)}
@@ -238,20 +240,80 @@ footer .bottom{grid-column:1 / -1;border-top:0.5px solid var(--ios-separator);pa
 #particles-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden;opacity:0.6}
 @media (max-width:1024px){.hero .container{grid-template-columns:1fr;text-align:center;gap:40px}.hero p{margin-left:auto;margin-right:auto}.hero-visual{order:-1}.hero-logo-svg{max-width:260px}.hero h1{font-size:34px}.about-wrap{grid-template-columns:1fr;text-align:center}.about-visual{order:-1}.rating-display{justify-content:center}footer .container{grid-template-columns:1fr 1fr}.about-seals{justify-content:center}.map-section{grid-template-columns:1fr}}
 @media (max-width:820px){
-.nav-links{display:none}.hamburger{display:flex}
-.appointment-form .form-grid{grid-template-columns:1fr}.appointment-form{padding:32px 24px}
-.packages-grid{grid-template-columns:1fr;max-width:460px}
-footer .container{grid-template-columns:1fr;gap:32px}.modal-box{padding:36px 24px}
-.gallery-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:0;padding:0;margin:0 -20px;scrollbar-width:none}
-.gallery-grid::-webkit-scrollbar{display:none}
-.gallery-item{flex:0 0 100%;width:100%;min-width:100%;scroll-snap-align:center;border-radius:0;aspect-ratio:1/1;border:none;box-shadow:none;transform:none!important}
-.gallery-item:hover{transform:none!important;box-shadow:none}
-.gallery-item img{transition:none}.gallery-item:hover img{transform:none}
-.gallery-item .gallery-overlay{opacity:1;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 50%);padding:16px 20px}
-.gallery-dots{display:flex}
-.map-wrap,.map-wrap iframe{min-height:320px}
+  .nav-links{display:none}.hamburger{display:flex}
+  .appointment-form .form-grid{grid-template-columns:1fr}.appointment-form{padding:32px 24px}
+  .packages-grid{grid-template-columns:1fr;max-width:460px}
+  footer .container{grid-template-columns:1fr;gap:32px}.modal-box{padding:36px 24px}
+  
+  /* معرض الصور - إصلاح الفراغ الجانبي */
+  .gallery-wrap{margin:0;padding:0;width:100%}
+  .gallery-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:0;padding:0;margin:0;scrollbar-width:none;width:100%}
+  .gallery-grid::-webkit-scrollbar{display:none}
+  .gallery-item{flex:0 0 100%;width:100%;min-width:100%;max-width:100%;scroll-snap-align:center;border-radius:0;aspect-ratio:1/1;border:none;box-shadow:none;transform:none!important;margin:0;padding:0}
+  .gallery-item:hover{transform:none!important;box-shadow:none}
+  .gallery-item img{transition:none;width:100%;height:100%;display:block}
+  .gallery-item:hover img{transform:none}
+  .gallery-item .gallery-overlay{opacity:1;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 50%);padding:16px 20px}
+  .gallery-dots{display:flex}
+  .map-wrap,.map-wrap iframe{min-height:320px}
+  
+  /* تحسين الأداء على الجوال */
+  #particles-canvas,.aurora{display:none!important}
+  .navbar,.lang-dropdown,.modal-overlay,.lightbox-close,.lightbox-nav{
+    backdrop-filter:blur(12px) saturate(150%)!important;
+    -webkit-backdrop-filter:blur(12px) saturate(150%)!important;
+  }
+  
+  /* إلغاء الأنيميشن الثقيل على الجوال */
+  .hero-logo-glow{animation:none!important}
+  .gold-seal{animation:none!important}
+  .pulse-call{animation:none!important}
+  .hero-logo-svg{animation:none!important;filter:none!important}
+  .hero-cta::after,.pkg-btn::after{display:none!important}
+  .hero-badge .pulse{animation:none!important}
+  .marquee-inner{animation-duration:40s}
+  
+  /* إلغاء تأثيرات hover على الجوال */
+  .service-card:hover,.team-card:hover,.why-card:hover,.package-card:hover,.review-card:hover,.countdown-item:hover{
+    transform:none!important;
+  }
+  .service-card:hover .icon-wrap{transform:none!important;box-shadow:none!important}
+  .team-card:hover .team-avatar{transform:none!important}
+  
+  /* منع overflow من الـ hero */
+  .hero{overflow:hidden;padding:calc(120px + var(--marquee-height)) 0 60px}
+  .hero .container{padding:0 16px}
 }
-@media (max-width:480px){body{font-size:16px}.hero h1{font-size:28px}.hero-cta{padding:16px 32px;font-size:16px}.section-title{font-size:28px}.section-sub{font-size:16px}.service-card{padding:28px 22px}.review-card{min-width:260px}.float-whatsapp{width:54px;height:54px;bottom:20px;left:20px}.float-whatsapp svg{width:26px;height:26px}.float-top{width:50px;height:50px;bottom:20px;right:20px;font-size:18px}.nav-logo{font-size:14px}.nav-logo svg{width:34px;height:34px;border-radius:10px}.lang-toggle{font-size:13px;padding:6px 12px 6px 8px}.lang-toggle svg{width:16px;height:16px}.theme-toggle{width:36px;height:36px;font-size:16px}.hamburger{padding:8px}.hamburger span{width:20px}.package-card .pkg-price{font-size:32px}.appointment-form{padding:28px 20px}.container{padding:0 16px}.countdown-item{padding:12px 16px;min-width:70px}.countdown-num{font-size:22px}.lightbox-caption{bottom:70px;font-size:14px;padding:8px 18px}.map-info{padding:24px 20px}}
+
+@media (max-width:480px){
+  body{font-size:16px}
+  .container{padding:0 14px!important}
+  .hero h1{font-size:28px}
+  .hero-cta{padding:16px 32px;font-size:16px}
+  .section-title{font-size:28px}
+  .section-sub{font-size:16px}
+  .service-card{padding:28px 22px}
+  .review-card{min-width:260px}
+  .float-whatsapp{width:54px;height:54px;bottom:20px;left:20px}
+  .float-whatsapp svg{width:26px;height:26px}
+  .float-top{width:50px;height:50px;bottom:20px;right:20px;font-size:18px}
+  .nav-logo{font-size:14px}
+  .nav-logo svg{width:34px;height:34px;border-radius:10px}
+  .lang-toggle{font-size:13px;padding:6px 12px 6px 8px}
+  .lang-toggle svg{width:16px;height:16px}
+  .theme-toggle{width:36px;height:36px;font-size:16px}
+  .hamburger{padding:8px}
+  .hamburger span{width:20px}
+  .package-card .pkg-price{font-size:32px}
+  .appointment-form{padding:28px 20px}
+  .countdown-item{padding:12px 16px;min-width:70px}
+  .countdown-num{font-size:22px}
+  .lightbox-caption{bottom:70px;font-size:14px;padding:8px 18px}
+  .map-info{padding:24px 20px}
+  .marquee-inner span{padding:0 16px;font-size:11px}
+  section{padding:60px 0}
+  .hero{padding:calc(110px + var(--marquee-height)) 0 50px}
+}
 </style>
 </head>
 <body>
@@ -539,12 +601,40 @@ footer .container{grid-template-columns:1fr;gap:32px}.modal-box{padding:36px 24p
 </div>
 <script>
 const translations={ar:{nav_home:'الرئيسية',nav_services:'الخدمات',nav_gallery:'المعرض',nav_packages:'الباقات',nav_reviews:'التقييمات',nav_contact:'اتصل بنا',hero_badge:'★ 4.9 · 87 مراجعة · 🕒 يفتح من 9 ص إلى 9 م',hero_title:'مكتب <span>النخبة</span> للعقارات',hero_cta:'📅 احجز جولة الآن',hero_certified:'شغل مرتب ويستاهل من جميع النواحي · فلل · شقق · أراضي',services_title:'خدماتنا <span>المتميزة</span>',services_sub:'نقدم خدمات متكاملة في بيع وتأجير وإدارة العقارات بمهنية عالية',service1_title:'بيع الفلل الفاخرة',service1_desc:'فلل راقية في أفضل أحياء الرياض، مع تصاميم عصرية وتشطيبات فاخرة.',service2_title:'الشقق الاستثمارية',service2_desc:'شقق جاهزة للسكن أو الاستثمار بعوائد ممتازة.',service3_title:'الأراضي التجارية والسكنية',service3_desc:'فرص استثمارية مميزة في مواقع استراتيجية.',service4_title:'إدارة الأملاك',service4_desc:'خدمة متكاملة لإدارة عقاراتك وتأجيرها بأعلى عائد.',team_title:'فريق <span>الخبراء</span>',team_sub:'نخبة من الخبراء العقاريين بتعامل راقي ومهنية عالية',team1_name:'الأستاذ خالد العتيبي',team1_specialty:'خبير عقاري',team1_desc:'خبير عقاري، تعامل راقي، مهنية عالية، شغل مرتب يستاهل من جميع النواحي.',team2_name:'المنسقة نورة',team2_specialty:'تنسيق المواعيد والجولات',team2_desc:'متعاونة وسريعة في تنسيق المواعيد والجولات.',team3_name:'فريق المكتب',team3_specialty:'خدمة متكاملة',team3_desc:'فريق متعاون يقدم أفضل الفرص العقارية لعملائنا.',why_title:'لماذا <span>نحن</span>',why_sub:'نتميز بمجموعة من المميزات التي تجعلنا الخيار الأفضل لك',why1_title:'شغل مرتب يستاهل',why1_desc:'شغل مرتب ويستاهل من جميع النواحي.',why2_title:'شفافية وصدق',why2_desc:'شفافين وصدقين في الوصف والتقييم.',why3_title:'تعامل راقي',why3_desc:'تعامل راقي ومهنية عالية من الخبراء والفريق.',why4_title:'متابعة مستمرة',why4_desc:'خدمة ممتازة ومتابعة مستمرة حتى إتمام الصفقة.',about_title:'عن <span>مكتب النخبة</span>',about_desc:'مكتب النخبة للعقارات مكتب متخصص في الرياض، يقدم خدمات متكاملة في بيع وتأجير وإدارة العقارات. يتميز بتعامل راقي، مهنية عالية، وشغل مرتب يستاهل من جميع النواحي. نحرص على تقديم أفضل الفرص العقارية لعملائنا، مع فريق متعاون لتنسيق المواعيد والجولات.',about_seal1:'✨ شغل مرتب يستاهل',about_seal2:'⭐ ثقة وشفافية',rating_num:'4.9',rating_reviews:'(87 مراجعة)',packages_title:'اختر <span>باقتك</span> المثالية',packages_sub:'باقات تسويق عقاري وتصوير احترافي تناسب احتياجاتك',cd_days:'أيام',cd_hours:'ساعات',cd_mins:'دقائق',cd_secs:'ثواني',pkg_basic_name:'باقة تسويق أساسية',pkg_basic_sub:'هوية رقمية احترافية لعقارك',pkg_basic_price:'249.75 <small>﷼</small>',pkg_basic_1:'صفحة تعريفية بالعقار',pkg_basic_2:'عرض الصور والمواصفات',pkg_basic_3:'نموذج تواصل',pkg_basic_4:'خريطة الموقع',pkg_basic_5:'تصميم متجاوب مع الجوال',pkg_premium_name:'باقة تسويق متكاملة',pkg_premium_sub:'تسويق + تصوير احترافي',pkg_premium_price:'624.75 <small>﷼</small>',pkg_premium_1:'كل مميزات الباقة الأساسية',pkg_premium_2:'تصوير احترافي للعقار',pkg_premium_3:'جولات افتراضية',pkg_premium_4:'تكامل مع واتساب',pkg_premium_5:'دعم فني لمدة 3 أشهر',pkg_featured_badge:'🌟 الأكثر طلباً',pkg_btn:'اطلب الباقة',gallery_title:'معرض <span>العقارات</span>',gallery_sub:'استعرض مجموعة من أبرز عقاراتنا المعروضة · اسحب لليمين واليسار',appointment_title:'احجز <span>جولتك</span>',appointment_sub:'املأ النموذج وسيتواصل معك فريق المكتب لتنسيق الجولة',form_name:'الاسم الكامل',form_phone:'رقم الجوال',form_service:'الخدمة المطلوبة',form_date:'التاريخ',form_time:'الوقت',form_submit:'تأكيد الحجز',reviews_title:'آراء <span>عملائنا</span>',reviews_sub:'ماذا يقول عملاؤنا عن تجربتهم مع مكتب النخبة',review1_name:'عبدالله',review1_text:'تعاملت مع مكتب النخبة في شراء فيلا، للأمانة شغل احترافي ويستاهل من جميع النواحي، خالد العتيبي رجل ثقة.',review1_date:'قبل شهرين',review2_name:'سارة الدوسري',review2_text:'ماشاء الله تبارك الرحمن، خدمة ممتازة ومتابعة مستمرة، والمنسقة نورة متعاونة جدًا وسرعة في الرد.',review2_date:'قبل 5 أشهر',review3_name:'فهد',review3_text:'أفضل مكتب عقاري تعاملت معه، شفافين وصدقين في الوصف، أنصح بهم بقوة.',review3_date:'قبل 3 أشهر',reviews_link:'📍 عرض جميع التقييمات على قوقل ماب',map_title:'موقع <span>المكتب</span>',map_sub:'الرياض، حي العليا، شارع التحلية، برج النخبة، الطابق 3',map_info_title:'تواصل <span>معنا</span>',map_addr_label:'العنوان',map_addr_val:'حي العليا، شارع التحلية، برج النخبة، الطابق 3',map_phone_label:'الهاتف',map_hours_label:'ساعات العمل',map_hours_val:'من 9 صباحاً إلى 9 مساءً',map_wa_label:'واتساب',map_directions:'🧭 احصل على الاتجاهات',footer_desc:'بيع وتأجير وإدارة العقارات · شغل مرتب يستاهل · الرياض',footer_contact:'تواصل معنا',footer_address:'📍 حي العليا، شارع التحلية، برج النخبة',footer_hours:'🕒 يفتح من 9 ص إلى 9 م',footer_call:'📞 اتصل الآن',footer_links:'روابط سريعة',footer_credit:'موقع تجريبي من تصميم صانع المواقع',modal_title:'تم الحجز بنجاح!',modal_desc:'سيتواصل معك فريق المكتب قريباً لتنسيق الجولة.',modal_btn:'حسناً',lang_label:'عربي',typewriter:'مكتب متخصص في الرياض · شغل مرتب يستاهل · فلل وشقق وأراضي'},en:{nav_home:'Home',nav_services:'Services',nav_gallery:'Gallery',nav_packages:'Packages',nav_reviews:'Reviews',nav_contact:'Contact',hero_badge:'★ 4.9 · 87 reviews · 🕒 Open 9 AM – 9 PM',hero_title:'Elite <span>Real Estate</span> Office',hero_cta:'📅 Book a tour now',hero_certified:'Refined work that deserves it · Villas · Apartments · Land',services_title:'Our <span>Premium</span> Services',services_sub:'We provide comprehensive real estate sales, rental and management services with high professionalism',service1_title:'Luxury Villa Sales',service1_desc:'Upscale villas in the best neighborhoods of Riyadh, with modern designs and luxury finishes.',service2_title:'Investment Apartments',service2_desc:'Apartments ready for living or investment with excellent returns.',service3_title:'Commercial & Residential Land',service3_desc:'Distinguished investment opportunities in strategic locations.',service4_title:'Property Management',service4_desc:'Complete service to manage and rent your properties for the highest return.',team_title:'Our <span>Experts</span>',team_sub:'Elite real estate experts with refined treatment and high professionalism',team1_name:'Mr. Khaled Al-Otaibi',team1_specialty:'Real Estate Expert',team1_desc:'Real estate expert, refined treatment, high professionalism, refined work that deserves it from all aspects.',team2_name:'Coordinator Noura',team2_specialty:'Appointments & Tours',team2_desc:'Cooperative and fast in coordinating appointments and tours.',team3_name:'Office Team',team3_specialty:'Comprehensive Service',team3_desc:'Cooperative team providing the best real estate opportunities for our clients.',why_title:'Why <span>Choose Us</span>',why_sub:'We are distinguished by features that make us your best choice',why1_title:'Refined Work Deserves It',why1_desc:'Refined work that deserves it from all aspects.',why2_title:'Transparency & Honesty',why2_desc:'Transparent and honest in description and evaluation.',why3_title:'Refined Treatment',why3_desc:'Refined treatment and high professionalism from experts and team.',why4_title:'Continuous Follow-up',why4_desc:'Excellent service and continuous follow-up until deal completion.',about_title:'About <span>Elite Office</span>',about_desc:'Elite Real Estate Office is a specialized office in Riyadh, providing comprehensive services in real estate sales, rental and management. It is distinguished by refined treatment, high professionalism, and refined work that deserves it from all aspects. We ensure the best real estate opportunities for our clients, with a cooperative team for appointments and tours.',about_seal1:'✨ Refined work deserves it',about_seal2:'⭐ Trust & Transparency',rating_num:'4.9',rating_reviews:'(87 reviews)',packages_title:'Choose Your <span>Ideal</span> Package',packages_sub:'Real estate marketing and professional photography packages tailored for you',cd_days:'Days',cd_hours:'Hours',cd_mins:'Minutes',cd_secs:'Seconds',pkg_basic_name:'Basic Marketing Package',pkg_basic_sub:'Professional digital identity for your property',pkg_basic_price:'249.75 <small>﷼</small>',pkg_basic_1:'Property introduction page',pkg_basic_2:'Photos and specifications display',pkg_basic_3:'Contact form',pkg_basic_4:'Location map',pkg_basic_5:'Mobile-responsive design',pkg_premium_name:'Complete Marketing Package',pkg_premium_sub:'Marketing + Professional Photography',pkg_premium_price:'624.75 <small>﷼</small>',pkg_premium_1:'All Basic package features',pkg_premium_2:'Professional property photography',pkg_premium_3:'Virtual tours',pkg_premium_4:'WhatsApp integration',pkg_premium_5:'3 months technical support',pkg_featured_badge:'🌟 Most Popular',pkg_btn:'Order Package',gallery_title:'Property <span>Gallery</span>',gallery_sub:'Browse a selection of our featured properties · Swipe left & right',appointment_title:'Book <span>Your Tour</span>',appointment_sub:'Fill out the form and our team will contact you to arrange the tour',form_name:'Full Name',form_phone:'Phone Number',form_service:'Service Required',form_date:'Date',form_time:'Time',form_submit:'Confirm Booking',reviews_title:'Our <span>Clients</span> Reviews',reviews_sub:'What our clients say about their experience with Elite Office',review1_name:'Abdullah',review1_text:'I dealt with Elite Office in buying a villa. Honestly, professional work that deserves it from all aspects. Khaled Al-Otaibi is a man of trust.',review1_date:'2 months ago',review2_name:'Sara Al-Dosari',review2_text:'MashaAllah Tabarak Al-Rahman, excellent service and continuous follow-up, and coordinator Noura is very cooperative and fast in responding.',review2_date:'5 months ago',review3_name:'Fahad',review3_text:'Best real estate office I dealt with, transparent and honest in description, I highly recommend them.',review3_date:'3 months ago',reviews_link:'📍 View all reviews on Google Maps',map_title:'Office <span>Location</span>',map_sub:'Riyadh, Al-Olaya District, Tahlia Street, Elite Tower, Floor 3',map_info_title:'Contact <span>Us</span>',map_addr_label:'Address',map_addr_val:'Al-Olaya, Tahlia Street, Elite Tower, Floor 3',map_phone_label:'Phone',map_hours_label:'Working Hours',map_hours_val:'9 AM – 9 PM',map_wa_label:'WhatsApp',map_directions:'🧭 Get Directions',footer_desc:'Sales, Rental & Property Management · Refined work · Riyadh',footer_contact:'Contact Us',footer_address:'📍 Al-Olaya, Tahlia Street, Elite Tower',footer_hours:'🕒 Open 9 AM – 9 PM',footer_call:'📞 Call Now',footer_links:'Quick Links',footer_credit:'Demo site designed by Website Maker',modal_title:'Booking Confirmed!',modal_desc:'Our team will contact you soon to arrange the tour.',modal_btn:'OK',lang_label:'English',typewriter:'Specialized office in Riyadh · Refined work that deserves it · Villas, apartments & land'}};
+
+/* ===== كشف الأجهزة الضعيفة ===== */
+const isMobileDevice = window.innerWidth < 820 || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+const isLowEnd = isMobileDevice || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) || (navigator.deviceMemory && navigator.deviceMemory <= 4);
+
+/* ===== تعطيل العناصر الثقيلة على الجوال ===== */
+if (isMobileDevice) {
+  const aurora = document.querySelector('.aurora');
+  if (aurora) aurora.style.display = 'none';
+}
+
 let currentLang='ar',typeTimer;
 function setLanguage(lang){currentLang=lang;const t=translations[lang];if(!t)return;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(t[key]!==undefined){if(key.includes('_title')||key==='pkg_basic_price'||key==='pkg_premium_price'||key==='about_seal1'||key==='about_seal2'||key==='map_info_title'){el.innerHTML=t[key]}else{el.textContent=t[key]}}});const serviceSelect=document.getElementById('appService');if(serviceSelect){const opts=serviceSelect.options;if(opts.length>=4){opts[0].textContent=t.service1_title;opts[1].textContent=t.service2_title;opts[2].textContent=t.service3_title;opts[3].textContent=t.service4_title}}document.getElementById('currentLangLabel').textContent=t.lang_label;document.querySelectorAll('.lang-dropdown button').forEach(btn=>{btn.classList.toggle('active-lang',btn.dataset.lang===lang)});document.documentElement.lang=lang;document.documentElement.dir=lang==='en'?'ltr':'rtl';document.getElementById('langToggle').setAttribute('aria-expanded','false');document.getElementById('langDropdown').classList.remove('open');startTypewriter()}
 let darkMode=localStorage.getItem('darkMode')==='true';function applyTheme(){document.documentElement.setAttribute('data-theme',darkMode?'dark':'light');document.getElementById('themeIcon').textContent=darkMode?'☀️':'🌙';localStorage.setItem('darkMode',String(darkMode))}applyTheme();
 document.getElementById('themeToggle').addEventListener('click',()=>{darkMode=!darkMode;applyTheme()});
-const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>{const y=window.scrollY;navbar.classList.toggle('scrolled',y>40);document.getElementById('backToTop').classList.toggle('visible',y>400);const docHeight=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progress-bar').style.width=(docHeight>0?(y/docHeight)*100:0)+'%'},{passive:true});
-document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+/* ===== Scroll محسّن باستخدام requestAnimationFrame ===== */
+const navbar=document.getElementById('navbar');
+const progressBar=document.getElementById('progress-bar');
+const backToTop=document.getElementById('backToTop');
+let ticking=false;
+function onScroll(){
+  const y=window.scrollY;
+  navbar.classList.toggle('scrolled',y>40);
+  backToTop.classList.toggle('visible',y>400);
+  const docHeight=document.documentElement.scrollHeight-window.innerHeight;
+  progressBar.style.width=(docHeight>0?(y/docHeight)*100:0)+'%';
+  ticking=false;
+}
+window.addEventListener('scroll',()=>{
+  if(!ticking){requestAnimationFrame(onScroll);ticking=true}
+},{passive:true});
+backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
 const hamburger=document.getElementById('hamburger'),mobileNav=document.getElementById('mobileNav');hamburger.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');hamburger.classList.toggle('active');hamburger.setAttribute('aria-expanded',String(open))});mobileNav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{mobileNav.classList.remove('open');hamburger.classList.remove('active');hamburger.setAttribute('aria-expanded','false')})});
 const langToggle=document.getElementById('langToggle'),langDropdown=document.getElementById('langDropdown');langToggle.addEventListener('click',e=>{e.stopPropagation();const open=langDropdown.classList.toggle('open');langToggle.setAttribute('aria-expanded',String(open))});document.addEventListener('click',()=>{langDropdown.classList.remove('open');langToggle.setAttribute('aria-expanded','false')});langDropdown.addEventListener('click',e=>e.stopPropagation());langDropdown.querySelectorAll('button').forEach(btn=>{btn.addEventListener('click',()=>{setLanguage(btn.dataset.lang)})});
 function startTypewriter(){clearTimeout(typeTimer);const el=document.getElementById('typewriter');if(!el)return;const text=translations[currentLang].typewriter||'';el.innerHTML='<span class="typewriter-cursor"></span>';let i=0;function type(){if(i<text.length){el.innerHTML=text.substring(0,i+1)+'<span class="typewriter-cursor"></span>';i++;typeTimer=setTimeout(type,55)}}setTimeout(type,500)}
@@ -613,11 +703,103 @@ const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{
 revealEls.forEach(el=>revealObserver.observe(el));
 function updateCountdown(){const now=new Date(),end=new Date(now);end.setDate(end.getDate()+3);end.setHours(end.getHours()+12);end.setMinutes(0,0,0);const diff=end-now;if(diff<=0)return;document.getElementById('cd-days').textContent=String(Math.floor(diff/86400000)).padStart(2,'0');document.getElementById('cd-hours').textContent=String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');document.getElementById('cd-mins').textContent=String(Math.floor((diff%3600000)/60000)).padStart(2,'0');document.getElementById('cd-secs').textContent=String(Math.floor((diff%60000)/1000)).padStart(2,'0')}
 setInterval(updateCountdown,1000);updateCountdown();
-const canvas=document.getElementById('particles-canvas'),ctx=canvas.getContext('2d');let w,h;const particles=[],count=40;
-function resize(){w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight}window.addEventListener('resize',resize);resize();
-class Particle{constructor(){this.x=Math.random()*w;this.y=Math.random()*h;this.r=Math.random()*2.5+1;this.dx=(Math.random()-0.5)*0.4;this.dy=(Math.random()-0.5)*0.4;this.alpha=Math.random()*0.4+0.15;this.type=Math.random()>0.5?'blue':'gold'}update(){this.x+=this.dx;this.y+=this.dy;if(this.x<0||this.x>w)this.dx*=-1;if(this.y<0||this.y>h)this.dy*=-1}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=this.type==='blue'?`rgba(30,77,123,${this.alpha*0.7})`:`rgba(200,150,62,${this.alpha*0.6})`;ctx.fill()}}
-for(let i=0;i<count;i++)particles.push(new Particle());
-(function drawParticles(){ctx.clearRect(0,0,w,h);particles.forEach(p=>{p.update();p.draw()});for(let i=0;i<particles.length;i++){for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<130){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(30,77,123,${0.06*(1-dist/130)})`;ctx.lineWidth=0.8;ctx.stroke()}}}requestAnimationFrame(drawParticles)})();
+
+/* ===== جزيئات محسّنة - تعمل فقط على الشاشات الكبيرة ===== */
+(function initParticles(){
+  const canvas=document.getElementById('particles-canvas');
+  if(!canvas)return;
+  
+  // تعطيل الجزيئات على الجوال والأجهزة الضعيفة
+  if(isLowEnd){
+    canvas.style.display='none';
+    return;
+  }
+  
+  // تقليل العدد على الأجهزة المتوسطة
+  const count = window.innerWidth > 1400 ? 25 : 15;
+  const ctx=canvas.getContext('2d',{alpha:true});
+  let w,h;
+  const particles=[];
+  let running = true;
+  
+  function resize(){
+    w=canvas.width=window.innerWidth;
+    h=canvas.height=window.innerHeight;
+  }
+  window.addEventListener('resize',resize,{passive:true});
+  resize();
+  
+  class Particle{
+    constructor(){
+      this.x=Math.random()*w;
+      this.y=Math.random()*h;
+      this.r=Math.random()*2+0.8;
+      this.dx=(Math.random()-0.5)*0.3;
+      this.dy=(Math.random()-0.5)*0.3;
+      this.alpha=Math.random()*0.35+0.1;
+      this.type=Math.random()>0.5?'blue':'gold';
+    }
+    update(){
+      this.x+=this.dx;
+      this.y+=this.dy;
+      if(this.x<0||this.x>w)this.dx*=-1;
+      if(this.y<0||this.y>h)this.dy*=-1;
+    }
+    draw(){
+      ctx.beginPath();
+      ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+      ctx.fillStyle=this.type==='blue'
+        ?`rgba(30,77,123,${this.alpha*0.7})`
+        :`rgba(200,150,62,${this.alpha*0.6})`;
+      ctx.fill();
+    }
+  }
+  
+  for(let i=0;i<count;i++)particles.push(new Particle());
+  
+  // إيقاف الرسم عند إخفاء الصفحة (توفير البطارية)
+  document.addEventListener('visibilitychange',()=>{
+    running = !document.hidden;
+    if(running) requestAnimationFrame(drawParticles);
+  });
+  
+  let lastFrame = 0;
+  function drawParticles(timestamp){
+    if(!running)return;
+    // تحديد الإطارات إلى 30fps لتوفير الأداء
+    if(timestamp - lastFrame < 33){
+      requestAnimationFrame(drawParticles);
+      return;
+    }
+    lastFrame = timestamp;
+    
+    ctx.clearRect(0,0,w,h);
+    particles.forEach(p=>{p.update();p.draw()});
+    
+    // خطوط الربط - فقط للأجهزة القوية
+    if(count >= 20){
+      for(let i=0;i<particles.length;i++){
+        for(let j=i+1;j<particles.length;j++){
+          const dx=particles[i].x-particles[j].x;
+          const dy=particles[i].y-particles[j].y;
+          const distSq = dx*dx + dy*dy;
+          if(distSq < 16900){
+            const dist = Math.sqrt(distSq);
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x,particles[i].y);
+            ctx.lineTo(particles[j].x,particles[j].y);
+            ctx.strokeStyle=`rgba(30,77,123,${0.05*(1-dist/130)})`;
+            ctx.lineWidth=0.7;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+    requestAnimationFrame(drawParticles);
+  }
+  requestAnimationFrame(drawParticles);
+})();
+
 setLanguage('ar');
 window.addEventListener('resize',()=>{if(window.innerWidth>820){mobileNav.classList.remove('open');hamburger.classList.remove('active');hamburger.setAttribute('aria-expanded','false')}});
 </script>
