@@ -240,6 +240,55 @@ html[dir="ltr"] .marquee-track{animation-name:marqueeLTR}
 .marquee-track span{display:inline-flex;align-items:center;gap:16px}
 .marquee-track span::after{content:'✦';font-size:11px;opacity:.7}
 
+
+/* Properties / Search (brutalist) */
+.properties-sec{background:var(--bg);border-bottom:2px solid var(--line);transition:background-color .35s,border-color .35s}
+.search-box{background:var(--paper);border:2px solid var(--line);padding:28px;margin-bottom:40px;box-shadow:6px 6px 0 var(--accent);transition:background-color .35s,border-color .35s}
+.search-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:14px;align-items:end}
+.search-field{display:flex;flex-direction:column;gap:6px}
+.search-field label{font-family:var(--mono);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:600}
+.search-btn{background:var(--accent);color:var(--on-accent);padding:15px 28px;font-family:var(--display);font-size:14px;font-weight:900;letter-spacing:.5px;border:2px solid var(--accent);height:52px;white-space:nowrap;transition:all .2s}
+.search-btn:hover{background:var(--accent-2);border-color:var(--accent-2);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--dark)}
+.search-results-info{text-align:center;margin-top:14px;font-size:14px;color:var(--muted);min-height:20px;font-family:var(--mono)}
+.search-results-info strong{color:var(--accent)}
+.properties-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--line);transition:border-color .35s}
+.property-card{background:var(--paper);border-inline-end:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);display:flex;flex-direction:column;transition:background-color .25s;cursor:pointer}
+.property-card:nth-child(3n){border-inline-end:none}
+.property-card:nth-last-child(-n+3){border-bottom:none}
+.property-card:hover{background:var(--bg-2)}
+.property-card.hidden{display:none}
+.property-image{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--dark)}
+.property-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;filter:grayscale(.1) contrast(1.05)}
+.property-card:hover .property-image img{transform:scale(1.04);filter:grayscale(0)}
+.property-badge{position:absolute;top:12px;right:12px;background:var(--dark);color:var(--on-dark);padding:5px 12px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:2px solid var(--line)}
+.property-badge.sale{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.property-badge.rent{background:var(--wa);color:#fff;border-color:var(--wa)}
+.property-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.property-title{font-family:var(--display);font-size:18px;font-weight:900;line-height:1.2;color:var(--on-bg);margin-bottom:6px;letter-spacing:-.01em}
+.property-loc{color:var(--muted);font-size:13px;margin-bottom:14px;font-family:var(--mono)}
+.property-features{display:flex;gap:12px;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);margin-bottom:14px;font-size:13px;color:var(--on-bg);font-weight:500}
+.property-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;gap:10px}
+.property-price{font-family:var(--display);font-size:20px;font-weight:900;color:var(--accent);letter-spacing:-.02em}
+.property-price small{font-size:12px;font-weight:600;color:var(--muted)}
+.property-btn{background:var(--dark);color:var(--on-dark);padding:10px 18px;font-family:var(--display);font-size:12px;font-weight:900;letter-spacing:.5px;border:2px solid var(--line);transition:all .2s;white-space:nowrap}
+.property-btn:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+@media(max-width:1024px){
+.properties-grid{grid-template-columns:repeat(2,1fr)}
+.property-card:nth-child(3n){border-inline-end:1px solid var(--line-soft)}
+.property-card:nth-child(2n){border-inline-end:none}
+.property-card:nth-last-child(-n+3){border-bottom:1px solid var(--line-soft)}
+.property-card:nth-last-child(-n+2){border-bottom:none}
+.search-grid{grid-template-columns:1fr 1fr}
+.search-btn{grid-column:1/-1}
+}
+@media(max-width:820px){
+.properties-grid{grid-template-columns:1fr}
+.property-card{border-inline-end:none;border-bottom:1px solid var(--line-soft)}
+.property-card:last-child{border-bottom:none}
+.search-grid{grid-template-columns:1fr}
+.search-box{padding:20px;box-shadow:4px 4px 0 var(--accent)}
+}
+
 /* Sections */
 section{padding:88px 0;position:relative;border-bottom:2px solid var(--line);transition:border-color .35s}
 .sec-head{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:end;margin-bottom:56px;padding-bottom:28px;border-bottom:2px solid var(--line);transition:border-color .35s}
@@ -730,6 +779,7 @@ footer .bottom{
 </a>
 <ul class="nav-links">
 <li><a href="#hero" data-i18n="nav_home">الرئيسية</a></li>
+<li><a href="#search" data-i18n="nav_search">ابحث</a></li>
 <li><a href="#services" data-i18n="nav_services">الخدمات</a></li>
 <li><a href="#gallery" data-i18n="nav_gallery">المعرض</a></li>
 <li><a href="#packages" data-i18n="nav_packages">الباقات</a></li>
@@ -751,6 +801,7 @@ footer .bottom{
 </div>
 <div class="mobile-nav" id="mobileNav">
 <a href="#hero" data-i18n="nav_home">الرئيسية</a>
+<a href="#search" data-i18n="nav_search">ابحث</a>
 <a href="#services" data-i18n="nav_services">الخدمات</a>
 <a href="#gallery" data-i18n="nav_gallery">المعرض</a>
 <a href="#packages" data-i18n="nav_packages">الباقات</a>
@@ -805,10 +856,186 @@ footer .bottom{
 </div>
 </div>
 
+<section class="properties-sec" id="search">
+<div class="container">
+<div class="sec-head reveal">
+<div class="sec-num">01 / PROPERTIES</div>
+<div>
+<div class="sec-kicker" data-i18n="search_kicker">ابحث عن عقار</div>
+<h2 class="sec-title" data-i18n="search_title">ابحث عن <span>عقارك</span></h2>
+<p class="sec-sub" data-i18n="search_sub">استخدم الفلاتر للعثور على العقار المناسب حسب النوع والغرض والسعر</p>
+</div>
+</div>
+
+<div class="search-box reveal">
+<div class="search-grid">
+<div class="search-field">
+<label for="searchText" data-i18n="search_label_text">بحث بالاسم أو الحي</label>
+<input type="text" id="searchText" data-i18n-placeholder="search_ph_text" placeholder="مثال: فيلا النرجس، شقة العليا...">
+</div>
+<div class="search-field">
+<label for="filterType" data-i18n="search_label_type">نوع العقار</label>
+<select id="filterType">
+<option value="" data-i18n="search_all">الكل</option>
+<option value="villa" data-i18n="search_villa">فيلا</option>
+<option value="apartment" data-i18n="search_apartment">شقة</option>
+<option value="land" data-i18n="search_land">أرض</option>
+</select>
+</div>
+<div class="search-field">
+<label for="filterPurpose" data-i18n="search_label_purpose">الغرض</label>
+<select id="filterPurpose">
+<option value="" data-i18n="search_all">الكل</option>
+<option value="sale" data-i18n="search_sale">للبيع</option>
+<option value="rent" data-i18n="search_rent">للإيجار</option>
+</select>
+</div>
+<div class="search-field">
+<label for="filterPrice" data-i18n="search_label_price">السعر الأقصى</label>
+<select id="filterPrice">
+<option value="" data-i18n="search_no_limit">بدون حد</option>
+<option value="500000" data-i18n="search_500k">500 ألف</option>
+<option value="1000000" data-i18n="search_1m">مليون</option>
+<option value="2000000" data-i18n="search_2m">2 مليون</option>
+<option value="5000000" data-i18n="search_5m">5 مليون</option>
+</select>
+</div>
+<button class="search-btn" id="searchBtn" type="button">
+<span data-i18n="search_btn">بحث</span>
+</button>
+</div>
+<div class="search-results-info" id="searchInfo"></div>
+</div>
+
+<div class="properties-grid" id="propertiesGrid">
+<!-- Property 1 -->
+<div class="property-card reveal" data-type="villa" data-purpose="sale" data-price="1850000" data-location="حي النرجس" data-location-en="Al Narjis" data-title="فيلا فاخرة - حي النرجس" data-title-en="Luxury Villa - Al Narjis">
+<div class="property-image">
+<img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop" alt="فيلا فاخرة النرجس" loading="lazy">
+<span class="property-badge sale" data-i18n="badge_sale">للبيع</span>
+</div>
+<div class="property-body">
+<div class="property-title" data-i18n="p1_title">فيلا فاخرة - حي النرجس</div>
+<div class="property-loc"><span data-i18n="p1_loc">حي النرجس، شمال الرياض</span></div>
+<div class="property-features">
+<span data-i18n="p1_beds">5 غرف</span>
+<span data-i18n="p1_baths">4 حمام</span>
+<span data-i18n="p1_area">420 م²</span>
+</div>
+<div class="property-footer">
+<div class="property-price">1,850,000 <small data-i18n="currency">﷼</small></div>
+<button class="property-btn" data-property="فيلا فاخرة - حي النرجس" data-property-en="Luxury Villa - Al Narjis"><span data-i18n="btn_contact">تواصل</span></button>
+</div>
+</div>
+</div>
+<!-- Property 2 -->
+<div class="property-card reveal" data-type="apartment" data-purpose="rent" data-price="45000" data-location="العليا" data-location-en="Olaya" data-title="شقة استثمارية - العليا" data-title-en="Investment Apartment - Olaya">
+<div class="property-image">
+<img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop" alt="شقة العليا" loading="lazy">
+<span class="property-badge rent" data-i18n="badge_rent">للإيجار</span>
+</div>
+<div class="property-body">
+<div class="property-title" data-i18n="p2_title">شقة استثمارية - العليا</div>
+<div class="property-loc"><span data-i18n="p2_loc">حي العليا، وسط الرياض</span></div>
+<div class="property-features">
+<span data-i18n="p2_beds">3 غرف</span>
+<span data-i18n="p2_baths">2 حمام</span>
+<span data-i18n="p2_area">180 م²</span>
+</div>
+<div class="property-footer">
+<div class="property-price">45,000 <small data-i18n="currency_year">﷼/سنوياً</small></div>
+<button class="property-btn" data-property="شقة استثمارية - العليا" data-property-en="Investment Apartment - Olaya"><span data-i18n="btn_contact">تواصل</span></button>
+</div>
+</div>
+</div>
+<!-- Property 3 -->
+<div class="property-card reveal" data-type="villa" data-purpose="sale" data-price="2400000" data-location="حي الياسمين" data-location-en="Al Yasmin" data-title="فيلا عصرية - حي الياسمين" data-title-en="Modern Villa - Al Yasmin">
+<div class="property-image">
+<img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" alt="فيلا الياسمين" loading="lazy">
+<span class="property-badge sale" data-i18n="badge_sale">للبيع</span>
+</div>
+<div class="property-body">
+<div class="property-title" data-i18n="p3_title">فيلا عصرية - حي الياسمين</div>
+<div class="property-loc"><span data-i18n="p3_loc">حي الياسمين، شمال الرياض</span></div>
+<div class="property-features">
+<span data-i18n="p3_beds">6 غرف</span>
+<span data-i18n="p3_baths">5 حمام</span>
+<span data-i18n="p3_area">520 م²</span>
+</div>
+<div class="property-footer">
+<div class="property-price">2,400,000 <small data-i18n="currency">﷼</small></div>
+<button class="property-btn" data-property="فيلا عصرية - حي الياسمين" data-property-en="Modern Villa - Al Yasmin"><span data-i18n="btn_contact">تواصل</span></button>
+</div>
+</div>
+</div>
+<!-- Property 4 -->
+<div class="property-card reveal" data-type="apartment" data-purpose="sale" data-price="980000" data-location="حي الملقا" data-location-en="Al Malqa" data-title="شقة راقية - حي الملقا" data-title-en="Elegant Apartment - Al Malqa">
+<div class="property-image">
+<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop" alt="شقة الملقا" loading="lazy">
+<span class="property-badge sale" data-i18n="badge_sale">للبيع</span>
+</div>
+<div class="property-body">
+<div class="property-title" data-i18n="p4_title">شقة راقية - حي الملقا</div>
+<div class="property-loc"><span data-i18n="p4_loc">حي الملقا، شمال الرياض</span></div>
+<div class="property-features">
+<span data-i18n="p4_beds">4 غرف</span>
+<span data-i18n="p4_baths">3 حمام</span>
+<span data-i18n="p4_area">220 م²</span>
+</div>
+<div class="property-footer">
+<div class="property-price">980,000 <small data-i18n="currency">﷼</small></div>
+<button class="property-btn" data-property="شقة راقية - حي الملقا" data-property-en="Elegant Apartment - Al Malqa"><span data-i18n="btn_contact">تواصل</span></button>
+</div>
+</div>
+</div>
+<!-- Property 5 -->
+<div class="property-card reveal" data-type="land" data-purpose="sale" data-price="3200000" data-location="شمال الرياض" data-location-en="North Riyadh" data-title="أرض سكنية - شمال الرياض" data-title-en="Residential Land - North Riyadh">
+<div class="property-image">
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop" alt="أرض شمال الرياض" loading="lazy">
+<span class="property-badge sale" data-i18n="badge_sale">للبيع</span>
+</div>
+<div class="property-body">
+<div class="property-title" data-i18n="p5_title">أرض سكنية - شمال الرياض</div>
+<div class="property-loc"><span data-i18n="p5_loc">شمال الرياض</span></div>
+<div class="property-features">
+<span data-i18n="p5_area">800 م²</span>
+<span data-i18n="p5_type">سكني</span>
+</div>
+<div class="property-footer">
+<div class="property-price">3,200,000 <small data-i18n="currency">﷼</small></div>
+<button class="property-btn" data-property="أرض سكنية - شمال الرياض" data-property-en="Residential Land - North Riyadh"><span data-i18n="btn_contact">تواصل</span></button>
+</div>
+</div>
+</div>
+<!-- Property 6 -->
+<div class="property-card reveal" data-type="villa" data-purpose="sale" data-price="4500000" data-location="حي العقيق" data-location-en="Al Aqiq" data-title="فيلا دوبلكس - حي العقيق" data-title-en="Duplex Villa - Al Aqiq">
+<div class="property-image">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" alt="فيلا العقيق" loading="lazy">
+<span class="property-badge sale" data-i18n="badge_sale">للبيع</span>
+</div>
+<div class="property-body">
+<div class="property-title" data-i18n="p6_title">فيلا دوبلكس - حي العقيق</div>
+<div class="property-loc"><span data-i18n="p6_loc">حي العقيق، شمال الرياض</span></div>
+<div class="property-features">
+<span data-i18n="p6_beds">7 غرف</span>
+<span data-i18n="p6_baths">6 حمام</span>
+<span data-i18n="p6_area">600 م²</span>
+</div>
+<div class="property-footer">
+<div class="property-price">4,500,000 <small data-i18n="currency">﷼</small></div>
+<button class="property-btn" data-property="فيلا دوبلكس - حي العقيق" data-property-en="Duplex Villa - Al Aqiq"><span data-i18n="btn_contact">تواصل</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
 <section class="services" id="services">
 <div class="container">
 <div class="sec-head reveal">
-<div class="sec-num">01 / SERVICES</div>
+<div class="sec-num">02 / SERVICES</div>
 <div>
 <div class="sec-kicker" data-i18n="services_kicker">ما نقدمه</div>
 <h2 class="sec-title" data-i18n="services_title">خدمات <span>متميزة</span></h2>
@@ -855,7 +1082,7 @@ footer .bottom{
 <section class="about" id="about">
 <div class="container">
 <div class="sec-head reveal">
-<div class="sec-num">02 / ABOUT</div>
+<div class="sec-num">03 / ABOUT</div>
 <div>
 <div class="sec-kicker" data-i18n="about_kicker">من نحن</div>
 <h2 class="sec-title" data-i18n="about_title">عن <span>مكتب النخبة</span></h2>
@@ -885,7 +1112,7 @@ footer .bottom{
 <section class="why" id="why">
 <div class="container">
 <div class="sec-head reveal">
-<div class="sec-num">03 / WHY US</div>
+<div class="sec-num">04 / WHY US</div>
 <div>
 <div class="sec-kicker" data-i18n="why_kicker">لماذا نحن</div>
 <h2 class="sec-title" data-i18n="why_title">ما يميز <span>النخبة</span></h2>
@@ -924,7 +1151,7 @@ footer .bottom{
 <section class="team" id="team">
 <div class="container">
 <div class="sec-head reveal">
-<div class="sec-num">04 / TEAM</div>
+<div class="sec-num">05 / TEAM</div>
 <div>
 <div class="sec-kicker" data-i18n="team_kicker">الفريق</div>
 <h2 class="sec-title" data-i18n="team_title">فريق <span>الخبراء</span></h2>
@@ -957,7 +1184,7 @@ footer .bottom{
 <section class="packages" id="packages">
 <div class="container">
 <div class="sec-head reveal">
-<div class="sec-num">05 / PACKAGES</div>
+<div class="sec-num">06 / PACKAGES</div>
 <div>
 <div class="sec-kicker" data-i18n="packages_kicker">العروض</div>
 <h2 class="sec-title" data-i18n="packages_title">اختر <span>باقتك</span> المثالية</h2>
@@ -1025,7 +1252,7 @@ footer .bottom{
 <section class="gallery" id="gallery">
 <div class="container">
 <div class="sec-head reveal">
-<div class="sec-num">06 / GALLERY</div>
+<div class="sec-num">07 / GALLERY</div>
 <div>
 <div class="sec-kicker" data-i18n="gallery_kicker">المعرض</div>
 <h2 class="sec-title" data-i18n="gallery_title">معرض <span>العقارات</span></h2>
@@ -1073,7 +1300,7 @@ footer .bottom{
 <section class="appointment" id="appointment">
 <div class="container">
 <div class="sec-head reveal">
-<div class="sec-num">07 / BOOKING</div>
+<div class="sec-num">08 / BOOKING</div>
 <div>
 <div class="sec-kicker" data-i18n="appointment_kicker">احجز الآن</div>
 <h2 class="sec-title" data-i18n="appointment_title">احجز <span>جولتك</span></h2>
@@ -1105,7 +1332,7 @@ footer .bottom{
 <section class="reviews" id="reviews">
 <div class="container">
 <div class="sec-head reveal">
-<div class="sec-num">08 / REVIEWS</div>
+<div class="sec-num">09 / REVIEWS</div>
 <div>
 <div class="sec-kicker" data-i18n="reviews_kicker">آراء العملاء</div>
 <h2 class="sec-title" data-i18n="reviews_title">آراء <span>عملائنا</span></h2>
@@ -1145,7 +1372,7 @@ footer .bottom{
 <section class="contact" id="contact">
 <div class="container">
 <div class="sec-head reveal">
-<div class="sec-num">09 / CONTACT</div>
+<div class="sec-num">10 / CONTACT</div>
 <div>
 <div class="sec-kicker" data-i18n="map_kicker">الموقع</div>
 <h2 class="sec-title" data-i18n="map_title">موقع <span>المكتب</span></h2>
@@ -1159,8 +1386,8 @@ footer .bottom{
 <div class="map-info">
 <h3 data-i18n="map_info_title">تواصل <span>معنا</span></h3>
 <div class="map-info-item"><div class="mi-icon">📍</div><div><strong data-i18n="map_addr_label">العنوان</strong><span data-i18n="map_addr_val">حي العليا، شارع التحلية، برج النخبة، الطابق 3</span></div></div>
-<div class="map-info-item"><div class="mi-icon">📞</div><div><strong data-i18n="map_phone_label">الهاتف</strong><span dir="ltr">055 123 4567</span></div></div>
-<div class="map-info-item"><div class="mi-icon">💬</div><div><strong data-i18n="map_wa_label">واتساب</strong><span dir="ltr">+966 55 123 4567</span></div></div>
+<div class="map-info-item"><div class="mi-icon">📞</div><div><strong data-i18n="map_phone_label">الهاتف</strong><span dir="ltr">050 765 2943</span></div></div>
+<div class="map-info-item"><div class="mi-icon">💬</div><div><strong data-i18n="map_wa_label">واتساب</strong><span dir="ltr">+966 50 765 2943</span></div></div>
 <div class="map-info-item"><div class="mi-icon">🕒</div><div><strong data-i18n="map_hours_label">ساعات العمل</strong><span data-i18n="map_hours_val">من 9 صباحاً إلى 9 مساءً</span></div></div>
 <a href="https://www.google.com/maps/dir/?api=1&destination=24.6875,46.6853" target="_blank" rel="noopener" class="map-directions"><span data-i18n="map_directions">🧭 احصل على الاتجاهات →</span></a>
 </div>
@@ -1181,12 +1408,12 @@ footer .bottom{
 </div>
 <div class="col">
 <h4 data-i18n="footer_contact">تواصل</h4>
-<span dir="ltr">📞 055 123 4567</span>
-<a href="https://wa.me/966551234567" target="_blank" rel="noopener"><span data-i18n="footer_whatsapp">💬 واتساب</span></a>
+<span dir="ltr">📞 050 765 2943</span>
+<a href="https://wa.me/966507652943" target="_blank" rel="noopener"><span data-i18n="footer_whatsapp">💬 واتساب</span></a>
 <a href="https://instagram.com/nukhbarealestate" target="_blank" rel="noopener"><span data-i18n="footer_instagram">📷 إنستقرام</span></a>
 <span data-i18n="footer_address">📍 العليا، التحلية، برج النخبة</span>
 <span data-i18n="footer_hours">🕒 9ص — 9م</span>
-<a href="tel:0551234567" class="pulse-call"><span data-i18n="footer_call">📞 اتصل الآن</span></a>
+<a href="tel:0507652943" class="pulse-call"><span data-i18n="footer_call">📞 اتصل الآن</span></a>
 </div>
 <div class="col">
 <h4 data-i18n="footer_links">روابط</h4>
@@ -1202,7 +1429,7 @@ footer .bottom{
 </div>
 </footer>
 
-<a href="https://wa.me/966551234567" target="_blank" rel="noopener" class="float-whatsapp" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<a href="https://wa.me/966507652943" target="_blank" rel="noopener" class="float-whatsapp" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 
 <button class="float-top" id="backToTop" aria-label="Back to top">↑</button>
 
@@ -1225,7 +1452,7 @@ footer .bottom{
 </div>
 
 <script>
-const OFFICE_WA = '966551234567';
+const OFFICE_WA = '966507652943';
 
 const translations = {
 ar: {
@@ -1233,7 +1460,7 @@ demo_text:'⚠️ موقع تجريبي للعرض',
 demo_link:'طلب النسخة الكاملة → 0507652943',
 brand_short:'النخبة',
 brand_tagline:'REAL ESTATE · RIYADH',
-nav_home:'الرئيسية',nav_services:'الخدمات',nav_gallery:'المعرض',
+nav_home:'الرئيسية',nav_search:'ابحث',nav_services:'الخدمات',nav_gallery:'المعرض',
 nav_packages:'الباقات',nav_reviews:'التقييمات',nav_contact:'اتصل بنا',
 hero_meta_rating:'4.9 / 87 مراجعة',
 hero_meta_hours:'الأحد — الخميس · 9 ص — 9 م',
@@ -1334,13 +1561,34 @@ footer_demo:'⚠️ موقع تجريبي · للنسخة الكاملة:',
 footer_copyright:'مكتب النخبة للعقارات',
 modal_title:'تم الحجز بنجاح',modal_desc:'سيتواصل معك فريق المكتب قريباً لتنسيق الجولة.',modal_btn:'حسناً',
 lang_label:'عربي',
+
+search_kicker:'ابحث عن عقار',
+search_title:'ابحث عن <span>عقارك</span>',
+search_sub:'استخدم الفلاتر للعثور على العقار المناسب حسب النوع والغرض والسعر',
+search_label_text:'بحث بالاسم أو الحي',search_ph_text:'مثال: فيلا النرجس، شقة العليا...',
+search_label_type:'نوع العقار',search_all:'الكل',search_villa:'فيلا',search_apartment:'شقة',search_land:'أرض',
+search_label_purpose:'الغرض',search_sale:'للبيع',search_rent:'للإيجار',
+search_label_price:'السعر الأقصى',search_no_limit:'بدون حد',search_500k:'500 ألف',search_1m:'مليون',search_2m:'2 مليون',search_5m:'5 مليون',
+search_btn:'بحث',
+search_no_results:'لم يتم العثور على نتائج مطابقة. جرّب تعديل الفلاتر.',
+search_found:'عقار مطابق',
+badge_sale:'للبيع',badge_rent:'للإيجار',currency:'﷼',currency_year:'﷼/سنوياً',
+btn_contact:'تواصل',
+p1_title:'فيلا فاخرة - حي النرجس',p1_loc:'حي النرجس، شمال الرياض',p1_beds:'5 غرف',p1_baths:'4 حمام',p1_area:'420 م²',
+p2_title:'شقة استثمارية - العليا',p2_loc:'حي العليا، وسط الرياض',p2_beds:'3 غرف',p2_baths:'2 حمام',p2_area:'180 م²',
+p3_title:'فيلا عصرية - حي الياسمين',p3_loc:'حي الياسمين، شمال الرياض',p3_beds:'6 غرف',p3_baths:'5 حمام',p3_area:'520 م²',
+p4_title:'شقة راقية - حي الملقا',p4_loc:'حي الملقا، شمال الرياض',p4_beds:'4 غرف',p4_baths:'3 حمام',p4_area:'220 م²',
+p5_title:'أرض سكنية - شمال الرياض',p5_loc:'شمال الرياض',p5_area:'800 م²',p5_type:'سكني',
+p6_title:'فيلا دوبلكس - حي العقيق',p6_loc:'حي العقيق، شمال الرياض',p6_beds:'7 غرف',p6_baths:'6 حمام',p6_area:'600 م²',
+wa_property_prefix:'السلام عليكم، مهتم بـ ',
+wa_property_suffix:' من مكتب النخبة',
 typewriter:'مكتب متخصص في الرياض · شغل مرتب يستاهل · فلل وشقق وأراضي'
 },
 en: {
 demo_text:'⚠️ This is a demo site',
 demo_link:'Request full version → 0507652943',
 brand_short:'ELITE',brand_tagline:'REAL ESTATE · RIYADH',
-nav_home:'Home',nav_services:'Services',nav_gallery:'Gallery',
+nav_home:'Home',nav_search:'Search',nav_services:'Services',nav_gallery:'Gallery',
 nav_packages:'Packages',nav_reviews:'Reviews',nav_contact:'Contact',
 hero_meta_rating:'4.9 / 87 REVIEWS',
 hero_meta_hours:'SUN—THU · 9AM — 9PM',
@@ -1441,6 +1689,27 @@ footer_demo:'⚠️ Demo site · For full version:',
 footer_copyright:'Elite Real Estate Office',
 modal_title:'Booking Confirmed',modal_desc:'Our team will contact you soon to arrange the tour.',modal_btn:'OK',
 lang_label:'EN',
+
+search_kicker:'Find a Property',
+search_title:'Find Your <span>Property</span>',
+search_sub:'Use filters to find the right property by type, purpose and price',
+search_label_text:'Search by name or district',search_ph_text:'e.g., Al Narjis Villa, Olaya Apartment...',
+search_label_type:'Property Type',search_all:'All',search_villa:'Villa',search_apartment:'Apartment',search_land:'Land',
+search_label_purpose:'Purpose',search_sale:'For Sale',search_rent:'For Rent',
+search_label_price:'Max Price',search_no_limit:'No limit',search_500k:'500K',search_1m:'1 Million',search_2m:'2 Million',search_5m:'5 Million',
+search_btn:'Search',
+search_no_results:'No matching results found. Try adjusting the filters.',
+search_found:'matching properties',
+badge_sale:'For Sale',badge_rent:'For Rent',currency:'SAR',currency_year:'SAR/year',
+btn_contact:'Contact',
+p1_title:'Luxury Villa - Al Narjis',p1_loc:'Al Narjis, North Riyadh',p1_beds:'5 beds',p1_baths:'4 baths',p1_area:'420 m²',
+p2_title:'Investment Apartment - Olaya',p2_loc:'Olaya, Central Riyadh',p2_beds:'3 beds',p2_baths:'2 baths',p2_area:'180 m²',
+p3_title:'Modern Villa - Al Yasmin',p3_loc:'Al Yasmin, North Riyadh',p3_beds:'6 beds',p3_baths:'5 baths',p3_area:'520 m²',
+p4_title:'Elegant Apartment - Al Malqa',p4_loc:'Al Malqa, North Riyadh',p4_beds:'4 beds',p4_baths:'3 baths',p4_area:'220 m²',
+p5_title:'Residential Land - North Riyadh',p5_loc:'North Riyadh',p5_area:'800 m²',p5_type:'Residential',
+p6_title:'Duplex Villa - Al Aqiq',p6_loc:'Al Aqiq, North Riyadh',p6_beds:'7 beds',p6_baths:'6 baths',p6_area:'600 m²',
+wa_property_prefix:'Hello, I am interested in ',
+wa_property_suffix:' from Elite Office',
 typewriter:'Specialized office in Riyadh · Refined work that deserves it · Villas, apartments & land'
 }
 };
@@ -1448,7 +1717,7 @@ typewriter:'Specialized office in Riyadh · Refined work that deserves it · Vil
 let currentLang = 'ar', typeTimer;
 const HTML_KEYS = [
 'hero_title_2','services_title','about_title','why_title','team_title',
-'packages_title','gallery_title','appointment_title','reviews_title',
+'search_title','packages_title','gallery_title','appointment_title','reviews_title',
 'map_title','map_info_title','footer_brand_name','rating_mini',
 'pkg_basic_price','pkg_premium_price'
 ];
@@ -1696,6 +1965,62 @@ document.getElementById('cd-mins').textContent = String(Math.floor(d % 36e5 / 6e
 document.getElementById('cd-secs').textContent = String(Math.floor(d % 6e4 / 1e3)).padStart(2, '0');
 }
 setInterval(updateCountdown, 1000); updateCountdown();
+
+
+/* Property Search + Contact */
+(function(){
+  const propertyCards = document.querySelectorAll('.property-card');
+  const searchText = document.getElementById('searchText');
+  const filterType = document.getElementById('filterType');
+  const filterPurpose = document.getElementById('filterPurpose');
+  const filterPrice = document.getElementById('filterPrice');
+  const searchBtn = document.getElementById('searchBtn');
+  const searchInfo = document.getElementById('searchInfo');
+  if (!searchBtn || !propertyCards.length) return;
+
+  function doSearch(){
+    const q = (searchText.value || '').trim().toLowerCase();
+    const type = filterType.value;
+    const purpose = filterPurpose.value;
+    const price = parseInt(filterPrice.value || '0', 10);
+    let count = 0;
+    propertyCards.forEach(card => {
+      let ok = true;
+      if (type && card.dataset.type !== type) ok = false;
+      if (purpose && card.dataset.purpose !== purpose) ok = false;
+      if (price && parseInt(card.dataset.price, 10) > price) ok = false;
+      if (q) {
+        const hay = ((card.dataset.title || '') + ' ' + (card.dataset.location || '') + ' ' + (card.dataset.titleEn || '') + ' ' + (card.dataset.locationEn || '')).toLowerCase();
+        if (hay.indexOf(q) === -1) ok = false;
+      }
+      if (ok) { card.classList.remove('hidden'); count++; }
+      else card.classList.add('hidden');
+    });
+    if (!searchInfo) return;
+    if (count === 0) searchInfo.textContent = (translations[currentLang] && translations[currentLang].search_no_results) || 'لم يتم العثور على نتائج';
+    else if (count === propertyCards.length) searchInfo.textContent = '';
+    else searchInfo.innerHTML = '<strong>' + count + '</strong> ' + ((translations[currentLang] && translations[currentLang].search_found) || 'عقار مطابق');
+  }
+
+  searchBtn.addEventListener('click', e => { e.preventDefault(); doSearch(); });
+  [searchText, filterType, filterPurpose, filterPrice].forEach(el => {
+    if (!el) return;
+    el.addEventListener('input', () => { clearTimeout(el._tid); el._tid = setTimeout(doSearch, 280); });
+    el.addEventListener('change', doSearch);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); doSearch(); } });
+  });
+
+  document.querySelectorAll('.property-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const name = currentLang === 'en' ? (btn.dataset.propertyEn || btn.dataset.property) : btn.dataset.property;
+      const prefix = (translations[currentLang] && translations[currentLang].wa_property_prefix) || 'السلام عليكم، مهتم بـ ';
+      const suffix = (translations[currentLang] && translations[currentLang].wa_property_suffix) || ' من مكتب النخبة';
+      const msg = prefix + name + suffix;
+      window.open('https://wa.me/' + OFFICE_WA + '?text=' + encodeURIComponent(msg), '_blank');
+    });
+  });
+})();
 
 setLanguage('ar');
 window.addEventListener('resize', () => { if (window.innerWidth > 820) { mobileNav.classList.remove('open'); hamburger.classList.remove('active'); } });
